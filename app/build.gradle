@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
     defaultConfig {
         applicationId "io.fogcloud.demo"
-        minSdkVersion 16
-        targetSdkVersion 23
+        minSdkVersion 27
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -23,9 +22,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
-    compile 'io.fogcloud.sdk:easylinkv3:0.2.7'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.1'
+    implementation 'io.fogcloud.sdk:easylinkv3:0.2.7'
+//    // 只发广播的版本
+//    implementation 'io.fogcloud.sdk:easylinkv3:0.1.4'
+    // 广播组播同时发的版本
+//    implementation 'io.fogcloud.sdk:easylinkv3:0.1.5'
 }

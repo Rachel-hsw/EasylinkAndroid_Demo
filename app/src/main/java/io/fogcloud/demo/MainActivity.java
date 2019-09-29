@@ -1,9 +1,15 @@
 package io.fogcloud.demo;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.DhcpInfo;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         final EditText ssid = (EditText) findViewById(R.id.ssid);
         if(ssid!=null) {
             ssid.setText(el.getSSID());
+            ssid.setText("ASUS");
+            psw.setText("13579135");
         }
 
         log_view = (EditText) findViewById(R.id.log);
